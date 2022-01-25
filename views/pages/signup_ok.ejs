@@ -1,0 +1,13 @@
+<%- contentFor('body') %>
+<main class= "form-signup">
+<div class="alert alert-success" role="alert">
+    Conta cadastrada com sucesso!
+</div>
+<p>
+    Você será redirecionado para a pagina principal em <b>três segundos!</b>
+    Caso não seja redirecionado <a href="/"> clique aqui</a>
+</p>
+</main>
+<script>
+    setTimeout(function(){window.location.href = "/";}, 3000)
+</script>

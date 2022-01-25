@@ -1,0 +1,36 @@
+<form method="post" action="<%= option.url %>">
+    <h1 class="h3 mb-3 fw-normal"><%= option.formName %></h1>
+    <% if (error){%>
+        <div class="alert alert-danger" role="alert">
+          <%= error.message %>
+        </div>
+      <% }%>
+      <div class="form-floating">
+        <% if (option.category){%>
+            <input type="hidden" class="form-control" id="floatingInput" placeholder="Nome" name="id" value="<%= option.category.id %>" >
+            <%} else {%>
+                <input type="hidden" class="form-control" id="floatingInput" placeholder="Nome" name="id"  >
+                <%} %>
+        
+    
+      </div>
+    <div class="form-floating">
+        <% if (option.category){%>
+            <input type="text" class="form-control" id="floatingInput" placeholder="Nome" name="name" value="<%= option.category.name %>" >
+            <%} else {%>
+                <input type="text" class="form-control" id="floatingInput" placeholder="Nome" name="name"  >
+                <%} %>
+        <label for="floatingInput">Nome</label>
+      </div>
+      <div class="form-floating">
+        <% if (option.category){%>
+            <input type="text" class="form-control" id="floatingInput" placeholder="Descrição" name="description" value="<%= option.category.description %>" >
+            <%} else {%>
+                <input type="text" class="form-control" id="floatingInput" placeholder="Descrição" name="description"  >
+                <%} %>
+        
+        <label for="floatingInput">Descrição</label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Cadastrar</button>
+      <%= option.buttonName%>
+    </form>
